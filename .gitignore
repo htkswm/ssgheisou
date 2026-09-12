@@ -1,0 +1,30 @@
+# 最低限
+.claude
+.claude/*
+.env
+
+# エディタ固有の設定
+.zed/
+.vscode/
+
+# ログファイル
+*.log
+
+# 会話記録・元データ・素材（公開しない）
+00meeting
+00meeting/*
+
+# セッションメモ・あんちょこ（公開しない）
+01sessionmemo
+01sessionmemo/*
+
+# ssgheisou 直下のあんちょこ README のみ除外（webssgheisou/README.md は公開する）
+/README.md
+
+# 削除予備軍
+_trash
+_trash/*
+
+# 作業用
+_work
+_work/*

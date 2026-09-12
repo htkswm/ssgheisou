@@ -1,0 +1,224 @@
+/* サガスカ周年並走会 — GitHub Pages 版スタイル
+   方針:
+   - 『サガ スカーレット グレイス 緋色の野望』のパッケージ色（緋色×黒）をイメージした暗色基調
+   - 見出しは明朝（Shippori Mincho）、本文はゴシック。角丸は使わない。
+   - 炎のロゴ（暗色の上でこそ映える）を主役に、金のヘアラインで締める */
+
+:root {
+  --bg:        #151010;   /* ページ背景（暗い赤黒） */
+  --bg-2:      #1d1515;   /* セクション背景 */
+  --card:      #241a1a;   /* カード */
+  --bar:       #0d0909;   /* メニューバー */
+  --line:      #3a2a2a;   /* 境界線 */
+  --gold:      #c9a45c;   /* 金のヘアライン */
+  --ink:       #f3ebe4;   /* 本文（温かみのある白） */
+  --ink-soft:  #b7a89c;   /* 補足文 */
+  --scarlet:   #d3381c;   /* 緋色（JIS 慣用色 #D3381C） */
+  --scarlet-2: #ff5a3c;   /* リンクのホバー・強調 */
+  --flame:     #e8451a;   /* ロゴの炎の橙 */
+  --radius:    0;         /* 角丸は使わない */
+  --maxw:      960px;
+  --mincho: "Shippori Mincho", "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "BIZ UDMincho", "MS PMincho", serif;
+  --gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", "Noto Sans JP", sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--gothic);
+  color: var(--ink);
+  line-height: 1.9;
+  background: var(--bg);
+  min-height: 100vh;
+}
+a { color: var(--scarlet-2); text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; display: block; }
+
+/* ---------- Header / Nav ---------- */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: var(--bar);
+  border-bottom: 2px solid var(--scarlet);
+}
+.nav {
+  max-width: var(--maxw); margin: 0 auto;
+  display: flex; align-items: center; gap: 14px; padding: 8px 18px;
+}
+.brand { display: flex; align-items: center; gap: 10px; }
+.brand img { height: 46px; width: auto; }
+.brand .tag {
+  font-family: var(--mincho); font-weight: 700;
+  font-size: 1.1rem; color: var(--ink); letter-spacing: .04em;
+}
+.nav-links { margin-left: auto; display: flex; align-items: center; gap: 4px; }
+.nav-links a, .dropdown > span {
+  font-family: var(--gothic); font-weight: 500; font-size: .95rem;
+  color: var(--ink); padding: 8px 12px; cursor: pointer; display: inline-block;
+}
+.nav-links a:hover, .dropdown:hover > span { background: var(--card); text-decoration: none; }
+.nav-links a.active { background: var(--card); color: var(--scarlet-2); box-shadow: inset 0 -2px 0 var(--scarlet); }
+
+.dropdown { position: relative; }
+.dropdown .menu {
+  position: absolute; right: 0; top: 100%;
+  background: var(--card); border: 1px solid var(--line); border-top: 2px solid var(--scarlet);
+  min-width: 170px; padding: 6px; display: none;
+}
+.dropdown:hover .menu, .dropdown.open .menu { display: block; }
+.dropdown .menu a { display: block; color: var(--ink); padding: 10px 14px; white-space: nowrap; }
+.dropdown .menu a:hover { background: var(--bg-2); text-decoration: none; }
+.dropdown .menu a.active { color: var(--scarlet-2); }
+
+/* 記録ページの年度切替（タブレットでも押しやすい常時表示） */
+.year-switch { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin: 0 auto 22px; }
+.year-switch a {
+  font-family: var(--mincho); font-weight: 700; font-size: .95rem;
+  color: var(--ink); background: var(--card); border: 1px solid var(--line);
+  padding: 8px 18px; line-height: 1.4;
+}
+.year-switch a:hover { text-decoration: none; border-color: var(--gold); }
+.year-switch a.active { border-color: var(--scarlet); background: var(--bg-2); color: var(--scarlet-2); }
+
+/* ---------- Layout ---------- */
+main { max-width: var(--maxw); margin: 0 auto; padding: 36px 18px 10px; }
+.section { margin: 0 auto 48px; }
+.center { text-align: center; }
+.soft { color: var(--ink-soft); }
+
+h1.page-title, h2.page-title {
+  font-family: var(--mincho); font-weight: 700;
+  color: var(--ink); text-align: center;
+  font-size: clamp(1.5rem, 4vw, 2.1rem);
+  margin: 6px 0 22px; letter-spacing: .06em;
+}
+.page-title .accent { color: var(--scarlet-2); }
+/* 見出し下の金のヘアライン */
+.page-title::after {
+  content: ""; display: block; width: 72px; height: 2px;
+  margin: 12px auto 0; background: var(--gold);
+}
+h3.sub-title {
+  font-family: var(--mincho); font-weight: 700; font-size: 1.15rem;
+  color: var(--ink); border-left: 4px solid var(--scarlet); padding-left: 12px; margin: 28px 0 10px;
+}
+
+/* ---------- Home hero ---------- */
+.hero { text-align: center; }
+.hero-logo { max-width: 360px; width: 70%; margin: 0 auto 10px; }
+.hero .title-kicker { font-family: var(--mincho); color: var(--ink-soft); letter-spacing: .1em; margin: 0; font-size: .95rem; }
+.hero .lead {
+  font-family: var(--mincho); font-weight: 700;
+  font-size: clamp(1.15rem, 3vw, 1.6rem); color: var(--ink); margin: 6px 0 4px; letter-spacing: .04em;
+}
+.hero .thanks { color: var(--ink); margin: 2px 0 20px; }
+.hero .hashtag { font-family: var(--mincho); color: var(--scarlet-2); font-size: 1.05rem; letter-spacing: .04em; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--mincho); font-weight: 700;
+  background: var(--card); color: var(--ink);
+  border: 1px solid var(--gold);
+  padding: 10px 24px; transition: transform .12s ease, background .12s ease;
+}
+.btn:hover { transform: translateY(-2px); text-decoration: none; background: var(--bg-2); }
+.btn .arrow { color: var(--scarlet-2); }
+.btn-row { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 8px 0 0; }
+
+/* 概要ボックス */
+.about {
+  max-width: 720px; margin: 0 auto; padding: 20px 24px;
+  background: var(--bg-2); border-top: 1px solid var(--gold); border-bottom: 1px solid var(--gold);
+}
+.about p { margin: 6px 0; }
+
+/* ---------- Records ---------- */
+.event-banner {
+  display: flex; align-items: center; justify-content: center; gap: 18px;
+  max-width: 640px; margin: 8px auto 24px; padding: 10px 20px;
+  background: var(--bar); border-top: 1px solid var(--gold); border-bottom: 1px solid var(--gold);
+}
+.event-banner .text {
+  text-align: center; font-family: var(--mincho); font-weight: 700;
+  font-size: clamp(1rem, 3vw, 1.35rem); color: var(--ink); letter-spacing: .04em;
+}
+.event-banner .text small { display: block; font-size: .8rem; color: var(--ink-soft); font-weight: 400; letter-spacing: .06em; }
+
+.runners { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+.runner {
+  background: var(--card); border: 1px solid var(--line);
+  padding: 16px 18px 16px 20px; display: flex; flex-direction: column; gap: 4px;
+  position: relative; overflow: hidden;
+}
+.runner::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--scarlet); }
+.runner .rname { font-family: var(--mincho); font-weight: 700; font-size: 1.2rem; }
+.runner .rname a { color: var(--ink); }
+.runner .rname a:hover { color: var(--scarlet-2); }
+.runner .sns { font-size: .8rem; color: var(--ink-soft); margin-left: 8px; font-family: var(--gothic); font-weight: 400; }
+.runner .cat { color: var(--ink); font-weight: 700; font-size: .95rem; }
+.runner .time { font-family: var(--mincho); font-weight: 700; font-size: 1.4rem; color: var(--scarlet-2); margin-top: 2px; letter-spacing: .02em; }
+.runner .badge {
+  font-size: .72rem; font-weight: 700; color: var(--ink); background: var(--bg-2); border: 1px solid var(--gold);
+  padding: 0 8px; margin-left: 8px; vertical-align: middle; font-family: var(--gothic);
+}
+.runner .badge.retire { border-color: var(--ink-soft); color: var(--ink-soft); }
+.runner .desc { color: var(--ink-soft); font-size: .88rem; line-height: 1.7; margin-top: 4px; }
+.runner .links { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px 14px; }
+.runner .links a { font-weight: 700; font-size: .9rem; display: inline-flex; align-items: center; gap: 5px; }
+.runner .links a::before { content: "\25B6"; font-size: .7rem; color: var(--scarlet); }
+.runner .links .note { color: var(--ink-soft); font-size: .78rem; font-weight: 400; }
+
+/* 複数走行（1走者で複数記録） */
+.runner .runs { display: flex; flex-direction: column; gap: 10px; margin-top: 4px; }
+.runner .run { border-top: 1px dashed var(--line); padding-top: 8px; }
+.runner .run:first-child { border-top: 0; padding-top: 0; }
+
+.pending {
+  max-width: 640px; margin: 0 auto; padding: 22px 24px; text-align: center;
+  background: var(--bg-2); border: 1px dashed var(--gold); color: var(--ink);
+}
+.pending p { margin: 4px 0; }
+
+/* ---------- Guide (ルール) ---------- */
+.guide { max-width: 760px; margin: 0 auto; }
+.guide ul { padding-left: 1.3em; margin: 6px 0 14px; }
+.guide li { margin: 4px 0; }
+.guide li ul { margin: 2px 0 4px; }
+.guide .qa { background: var(--card); border: 1px solid var(--line); padding: 14px 18px; margin: 0 0 10px; }
+.guide .qa .q { font-weight: 700; color: var(--ink); margin: 0 0 4px; }
+.guide .qa .q::before { content: "Q. "; color: var(--scarlet-2); font-family: var(--mincho); }
+.guide .qa .a { margin: 0; color: var(--ink-soft); }
+.guide .qa .a::before { content: "A. "; color: var(--gold); font-family: var(--mincho); }
+.guide .qa .a u { text-decoration: underline; text-decoration-color: var(--gold); color: var(--ink); }
+.guide .steps { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.guide .step { background: var(--card); border: 1px solid var(--line); padding: 14px 18px; }
+.guide .step .label { font-family: var(--mincho); font-weight: 700; color: var(--scarlet-2); margin: 0 0 4px; }
+.guide .step p { margin: 0; font-size: .92rem; }
+.example {
+  background: var(--card); border-left: 4px solid var(--gold); padding: 12px 16px; margin: 8px 0 16px;
+  font-size: .92rem; white-space: pre-line;
+}
+
+/* ---------- Link page ---------- */
+.linklist { max-width: 620px; margin: 0 auto; }
+.linklist .group { margin-bottom: 26px; }
+.linklist h3 { font-family: var(--mincho); font-weight: 700; color: var(--ink); border-left: 4px solid var(--scarlet); padding-left: 10px; margin: 0 0 10px; }
+.linklist ul { list-style: none; margin: 0; padding: 0; }
+.linklist li { background: var(--card); border: 1px solid var(--line); padding: 11px 16px; margin-bottom: 9px; }
+.linklist li .sub { color: var(--ink-soft); font-size: .85rem; }
+
+/* ---------- Footer ---------- */
+.site-footer { margin-top: 40px; border-top: 1px solid var(--gold); background: var(--bar); }
+.site-footer .inner { max-width: var(--maxw); margin: 0 auto; padding: 24px 18px 34px; text-align: center; color: var(--ink-soft); font-size: .82rem; }
+.site-footer .game { font-family: var(--mincho); font-weight: 700; color: var(--ink); font-size: 1rem; margin-bottom: 8px; letter-spacing: .04em; }
+.site-footer .copyright { line-height: 1.8; }
+.site-footer .copyright a { color: var(--ink-soft); text-decoration: underline; }
+.site-footer .admin { margin-top: 10px; font-weight: 700; color: var(--ink); }
+
+@media (max-width: 560px) {
+  .nav { gap: 8px; padding: 6px 12px; }
+  .brand img { height: 40px; }
+  .brand .tag { font-size: .95rem; }
+  .nav-links a, .dropdown > span { padding: 6px 9px; font-size: .85rem; }
+  main { padding-top: 24px; }
+}

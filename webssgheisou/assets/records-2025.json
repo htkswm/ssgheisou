@@ -1,0 +1,77 @@
+{
+  "event": "サガ スカーレット グレイス 緋色の野望 発売7周年 周回並走会",
+  "shortName": "7周年並走会",
+  "year": 2025,
+  "anniversary": 7,
+  "date": "2025-08-02",
+  "hashtag": "#サガスカ7周年並走会",
+  "source": "Google スプレッドシート「7周年並走会リスト」記録シート（00meeting/data/7th-2025-records-sheet.md）",
+  "note": "twitch配信記録はアーカイブ保存期限が過ぎると消える可能性あり。",
+  "runners": [
+    {
+      "name": "霧雨マリパ（アセルス）", "sns": "https://x.com/kirisame_maripa", "snsLabel": "X",
+      "runs": [
+        { "category": "バルマンテ編NG+", "time": "14:48:32", "reference": true,
+          "desc": "クリアデータロードからバルマンテ編を選択し、引き継ぎ制限は無いが、初期メンバー・加入キャラ数などに一部制約を持たせ、破壊神エンドルートでのクリアを目指す。若干クリア時刻が日本時間8月2日を超えたので参考記録扱いになりますが、低スキルレベルでのクリア、お疲れ様でした。",
+          "links": [
+            { "label": "ポスト", "url": "https://x.com/kirisame_maripa/status/1951474251103605182" },
+            { "label": "ポスト2", "url": "https://x.com/kirisame_maripa/status/1951665167579922696" }
+          ] }
+      ]
+    },
+    {
+      "name": "アプフェル", "sns": "https://x.com/apfelchain", "snsLabel": "X",
+      "runs": [
+        { "category": "バルマンテ編NG ウルピナ救出ルート再会エンド", "time": null, "retired": true,
+          "desc": "New Game からバルマンテ編を選択し、見たいイベントを拾ってクリアするコンセプト。ラスボスは全て5タイプになります。ゴールには届きませんでしたが、15時間半以上もの間、ナイスファイトでした。(リベンジ楽しみにしています)",
+          "links": [ { "label": "ポスト", "url": "https://x.com/apfelchain/status/1951671095922413919" } ] }
+      ]
+    },
+    {
+      "name": "ちきん", "sns": "https://x.com/chikengames0831", "snsLabel": "X",
+      "runs": [
+        { "category": "まったりバルマンテ編 NG+", "time": "6:22:55",
+          "desc": "一部引き継ぎ制限の中、クリアデータからバルマンテ編を選択し、ゴールに向かいます。",
+          "links": [ { "label": "アーカイブ", "url": "https://www.twitch.tv/videos/2528826055", "note": "twitch配信記録" } ] }
+      ]
+    },
+    {
+      "name": "とらねこかんな", "sns": "https://x.com/toranekocanna/", "snsLabel": "X",
+      "runs": [
+        { "category": "バルマンテ編 NG ※1走め", "time": "2:38:27", "desc": "New Game〜クリアデータセーブ区間。",
+          "links": [ { "label": "ポスト", "url": "https://x.com/toranekocanna/status/1951650116915585392" }, { "label": "アーカイブ", "url": "https://www.twitch.tv/videos/2528795137", "note": "twitch配信記録" } ] },
+        { "category": "バルマンテ編 NG ※2走め", "time": "2:39:26", "desc": "New Game〜クリアデータセーブ区間。",
+          "links": [ { "label": "ポスト", "url": "https://x.com/toranekocanna/status/1951650116915585392" }, { "label": "アーカイブ", "url": "https://www.twitch.tv/videos/2528795137", "note": "twitch配信記録" } ] }
+      ]
+    },
+    {
+      "name": "equi（えくい）", "sns": "https://x.com/equi_music", "snsLabel": "X",
+      "runs": [
+        { "category": "バルマンテ編NG", "time": "3:34:55", "desc": "RTA並走。New Game〜クリアデータセーブ区間。",
+          "links": [ { "label": "アーカイブ", "url": "https://www.youtube.com/watch?v=KqCqAv80dds" } ] }
+      ]
+    },
+    {
+      "name": "koma_meat", "sns": "https://fedibird.com/@koma_meat", "snsLabel": "fedibird",
+      "runs": [
+        { "category": "バルマンテ編 NG アーサーエンド", "time": "3:16:32", "desc": "New Game〜クリアデータセーブ区間。アーサーエンド(ラスボスタイプ222)でのクリアを目指す",
+          "links": [ { "label": "ポスト", "url": "https://fedibird.com/@koma_meat/114957870825457732" }, { "label": "アーカイブ", "url": "https://www.twitch.tv/videos/2528815444", "note": "twitch配信記録" } ] },
+        { "category": "バルマンテ編 NG", "time": "2:34:10", "desc": "RTA並走。New Game〜クリアデータセーブ区間。",
+          "links": [ { "label": "ポスト", "url": "https://fedibird.com/@koma_meat/114959549899200609" }, { "label": "アーカイブ", "url": "https://www.twitch.tv/videos/2528993270", "note": "twitch配信記録" } ] }
+      ]
+    },
+    {
+      "name": "かしわめ", "sns": "https://fedibird.com/@kashiwame", "snsLabel": "fedibird",
+      "runs": [
+        { "category": "バルマンテ編 NG", "time": "2:32:10", "desc": "New Game〜クリアデータセーブ区間",
+          "links": [ { "label": "ポスト", "url": "https://fedibird.com/web/statuses/114954907251765903" }, { "label": "アーカイブ", "url": "https://youtu.be/gN0aeGMH-bU" } ] },
+        { "category": "バルマンテ編 NG 初期メンバー7人でクリア", "time": "3:36:10", "desc": "New Game〜クリアデータセーブ区間。初期メンバー7人だけでクリアする。",
+          "links": [ { "label": "ポスト", "url": "https://fedibird.com/web/statuses/114956632606335100" }, { "label": "アーカイブ", "url": "https://youtu.be/3FnibB5HEN8" } ] },
+        { "category": "レオナルド編NG+ 初期メンバー7人でクリア", "time": "1:01:07", "desc": "クリアデータロード開始〜クリアデータセーブ区間。レオナルド編を初期メンバー7人だけでクリアする。",
+          "links": [ { "label": "ポスト", "url": "https://fedibird.com/web/statuses/114956996216416131" }, { "label": "アーカイブ", "url": "https://youtu.be/NVbZWKYkhZ4" } ] },
+        { "category": "バルマンテ編NG", "time": "2:43:04", "desc": "RTA並走。New Game〜クリアデータセーブ区間。",
+          "links": [ { "label": "ポスト", "url": "https://fedibird.com/web/statuses/114959339341563576" }, { "label": "アーカイブ", "url": "https://youtu.be/fVlmae8d_xI" } ] }
+      ]
+    }
+  ]
+}
