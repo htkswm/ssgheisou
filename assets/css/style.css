@@ -132,16 +132,38 @@ h3.sub-title {
   font-size: clamp(2rem, 6vw, 3.2rem); letter-spacing: .18em; margin: 4px 0 26px;
   font-weight: 400;                      /* 細めの明朝で品よく */
 }
-/* 「SaGa SCARLET GRACE」風の英字（Cinzel: トラヤヌス系セリフ） */
-.hero .en-title {
-  font-family: "Cinzel", "Trajan Pro", "Times New Roman", serif;
-  font-weight: 600; font-size: clamp(.95rem, 2.6vw, 1.35rem);
-  letter-spacing: .22em; color: var(--ink); margin: 0 0 2px;
+/* ゲームタイトル: 『SaGa SCARLET GRACE 緋色の野望』を主役に（2行）。
+   英字は小文字 a が本物の小文字で出るセリフ体（Cormorant Garamond）、日本語は明朝。 */
+.hero .game-title { margin: 6px 0 0; line-height: 1.15; }
+.hero .game-title .en {
+  display: block;
+  font-family: "Cormorant Garamond", "Garamond", "Times New Roman", serif;
+  font-weight: 700; font-size: clamp(1.5rem, 4.6vw, 2.5rem);
+  letter-spacing: .12em; color: var(--ink);
+}
+.hero .game-title .ja {
+  display: block;
+  font-family: var(--mincho); font-weight: 700;
+  font-size: clamp(2.1rem, 6.6vw, 3.5rem); letter-spacing: .12em; color: var(--ink);
+  margin-top: 2px;
+}
+.hero .game-title .en, .hero .game-title .ja {
   text-shadow:
     -1px -1px 0 #0c0707, 1px -1px 0 #0c0707, -1px 1px 0 #0c0707, 1px 1px 0 #0c0707,
-    0 0 14px rgba(201, 164, 92, .45);         /* 金のにじみ */
+    0 -1.4px 0 #0c0707, 0 1.4px 0 #0c0707, -1.4px 0 0 #0c0707, 1.4px 0 0 #0c0707,
+    0 0 16px rgba(201, 164, 92, .40), 0 2px 12px rgba(0, 0, 0, .7);   /* 縁取り＋金のにじみ */
 }
-.hero .en-title .sub { color: var(--gold); }
+@supports (paint-order: stroke fill) {
+  .hero .game-title .en, .hero .game-title .ja { -webkit-text-stroke: 3px #0c0707; paint-order: stroke fill; }
+}
+/* サブ: 北米版タイトル（後付けなので小さく） */
+.hero .game-sub {
+  font-family: "Cormorant Garamond", "Garamond", "Times New Roman", serif;
+  font-weight: 600; font-size: clamp(.95rem, 2.3vw, 1.15rem);
+  letter-spacing: .18em; color: var(--ink-soft); margin: 6px 0 22px;
+}
+/* サイト名: 発売周年記念 ／ 周年並走会（ゲームタイトルよりやや小さく） */
+.hero h1.page-title { font-size: clamp(1.7rem, 5vw, 2.6rem); }
 .hero .hashtag.outlined { color: #ff6a4a; }
 .hero h1.page-title::after { width: 120px; }
 .hero .lead {
