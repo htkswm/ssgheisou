@@ -4,50 +4,102 @@
   "year": 2023,
   "anniversary": 5,
   "date": "2023-08-05",
-  "dateNote": "開催日はシート内の記述からの推定（要確認）",
   "hashtag": "#サガスカ5周年並走会",
   "source": "Google スプレッドシート「サガスカ5周年並走会・サガスカ5周年リレー記録」（00meeting/data/4th-2022-5th-2023-records-sheets.md）",
   "note": "twitch配信記録はアーカイブ保存期限が過ぎると消える可能性あり。",
   "runners": [
     {
-      "name": "koma_meat", "sns": "https://twitter.com/koma_meat", "snsLabel": "X",
+      "name": "koma_meat",
+      "sns": "https://twitter.com/koma_meat",
+      "snsLabel": "X",
       "runs": [
-        { "category": "槍が無いとやりにくいウルピナ編RTA(NG)", "time": "2:50:23",
+        {
+          "category": "槍が無いとやりにくいウルピナ編RTA(NG)",
+          "time": "2:50:23",
           "desc": "ツインスパイク使用禁止。このほか、緋色の野望版追加武器禁止、ドロップされた場合の強武器(バトルタバール・バトルハンマー)バトルが楽になるので禁止！という中でウルピナ編をNewGameから始める周回プレー。稼ぎの緻密さが(リカバリーも含めて)輝きます。",
-          "links": [ { "label": "アーカイブ", "url": "https://www.twitch.tv/videos/1890502249", "note": "twitch配信記録" } ] }
+          "links": [
+            {
+              "label": "アーカイブ",
+              "url": "https://www.twitch.tv/videos/1890502249",
+              "note": "twitch配信記録"
+            }
+          ]
+        }
       ]
     },
     {
-      "name": "toranekocanna", "sns": "https://twitter.com/toranekocanna", "snsLabel": "X",
+      "name": "toranekocanna",
+      "sns": "https://twitter.com/toranekocanna",
+      "snsLabel": "X",
       "runs": [
-        { "category": "バルマンテ編最初の神エンドNG+", "time": "1:31:26",
+        {
+          "category": "バルマンテ編最初の神エンドNG+",
+          "time": "1:31:26",
           "desc": "RTAジャンルでは敬遠されがちな強めラスボス連戦をクリアデータロードからのパワー！で押し切ります。1日2周されていまして、RTAでは基本的に追えないストーリーやカテゴリーの説明など込みで1周目、2周目はタイム意識した周回となります。(記録は2周目のもの)",
-          "links": [ { "label": "アーカイブ", "url": "https://www.twitch.tv/videos/1890827163", "note": "twitch配信記録" } ] }
+          "links": [
+            {
+              "label": "アーカイブ",
+              "url": "https://www.twitch.tv/videos/1890827163",
+              "note": "twitch配信記録"
+            }
+          ]
+        }
       ]
     },
     {
       "name": "sobamin",
       "runs": [
-        { "category": "レオナルド編NG", "time": "10:09:00",
+        {
+          "category": "レオナルド編NG",
+          "time": "10:09:00",
           "desc": "昨年に続いて、レオナルド編NGで参戦されました。ありがとうございます。ラスボス連戦直前の選択肢を間違えたため大変だったとか。ラスボスバトルが大変大惨事になったと思います・・・。長時間のプレー、本当にお疲れ様です。※記録は、開始と終了のポスト間隔で判断しました（キャプチャ画像で時間確認のみ）。",
-          "links": [] }
+          "links": []
+        }
       ]
     },
     {
-      "name": "狩人の合唱", "sns": "https://twitter.com/jagerchor3270", "snsLabel": "X",
+      "name": "狩人の合唱",
+      "sns": "https://twitter.com/jagerchor3270",
+      "snsLabel": "X",
       "runs": [
-        { "category": "レオナルド編NG", "time": "2:01:45",
+        {
+          "category": "レオナルド編NG",
+          "time": "2:01:45",
           "desc": "リレー終了後、日付が変わる前までにもう一周されました。ありがとうございます。本番同様、安定して2時間程度におさまるナイスランです。",
-          "links": [ { "label": "アーカイブ", "url": "https://www.youtube.com/watch?v=uHIXTGd_NsA" } ] }
+          "links": [
+            {
+              "label": "アーカイブ",
+              "url": "https://www.youtube.com/watch?v=uHIXTGd_NsA"
+            }
+          ]
+        }
       ]
     },
     {
-      "name": "カシワメ", "sns": "https://twitter.com/kashi_wame", "snsLabel": "X",
+      "name": "カシワメ",
+      "sns": "https://twitter.com/kashi_wame",
+      "snsLabel": "X",
       "runs": [
-        { "category": "レオナルド編NG+ 倒せたら倒す真ファイアブリンガー", "time": null, "retired": true,
+        {
+          "category": "レオナルド編NG+ 倒せたら倒す真ファイアブリンガー",
+          "time": null,
+          "retired": true,
           "desc": "閃き・ロール調整なしのクリアデータを利用して、真ファイアブリンガーを倒そうとする試み。5時間くらいやりましたが、5日の24時を過ぎたので記録なし、としました。次元断でもあったらまた違ったような気がします(真レーヴァテインには効きませんが、追加で攻撃が入るのが大きい）",
-          "links": [ { "label": "アーカイブ1", "url": "https://www.twitch.tv/videos/1908966216", "note": "twitch配信記録" }, { "label": "アーカイブ2", "url": "https://www.twitch.tv/videos/1908966721", "note": "twitch配信記録" } ] }
+          "links": [
+            {
+              "label": "アーカイブ1",
+              "url": "https://www.twitch.tv/videos/1908966216",
+              "note": "twitch配信記録"
+            },
+            {
+              "label": "アーカイブ2",
+              "url": "https://www.twitch.tv/videos/1908966721",
+              "note": "twitch配信記録"
+            }
+          ]
+        }
       ]
     }
-  ]
+  ],
+  "dateConfirmed": "案内スライド表紙で確認（2026-09-13）"
 }
