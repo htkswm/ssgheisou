@@ -115,12 +115,34 @@ h3.sub-title {
 /* ロゴは控えめ（飾り程度）。主役は明朝の見出し */
 .hero-logo { max-width: 180px; width: 40%; margin: 0 auto 6px; opacity: .92; }
 .hero .title-kicker { font-family: var(--mincho); color: var(--ink-soft); letter-spacing: .14em; margin: 0; font-size: .95rem; }
+/* 縁取り: 炎・彗星の上でも文字が沈まないように。
+   paint-order 対応ブラウザでは太めのストロークを字形の外側だけに描き、
+   非対応でも8方向の text-shadow で細い縁が付く。 */
+.outlined {
+  text-shadow:
+    -1px -1px 0 #0c0707, 1px -1px 0 #0c0707, -1px 1px 0 #0c0707, 1px 1px 0 #0c0707,
+    0 -1.4px 0 #0c0707, 0 1.4px 0 #0c0707, -1.4px 0 0 #0c0707, 1.4px 0 0 #0c0707,
+    0 2px 12px rgba(0, 0, 0, .7);
+}
+@supports (paint-order: stroke fill) {
+  .outlined { -webkit-text-stroke: 3px #0c0707; paint-order: stroke fill; }
+  .outlined.thin { -webkit-text-stroke: 2px #0c0707; }
+}
 .hero h1.page-title {
   font-size: clamp(2rem, 6vw, 3.2rem); letter-spacing: .18em; margin: 4px 0 26px;
   font-weight: 400;                      /* 細めの明朝で品よく */
-  text-shadow: 0 2px 14px rgba(0, 0, 0, .65);   /* 彗星・緋色の空の上でも読めるように */
 }
-.hero .title-kicker, .hero .lead, .hero .thanks, .hero .hashtag { text-shadow: 0 1px 8px rgba(0, 0, 0, .6); }
+/* 「SaGa SCARLET GRACE」風の英字（Cinzel: トラヤヌス系セリフ） */
+.hero .en-title {
+  font-family: "Cinzel", "Trajan Pro", "Times New Roman", serif;
+  font-weight: 600; font-size: clamp(.95rem, 2.6vw, 1.35rem);
+  letter-spacing: .22em; color: var(--ink); margin: 0 0 2px;
+  text-shadow:
+    -1px -1px 0 #0c0707, 1px -1px 0 #0c0707, -1px 1px 0 #0c0707, 1px 1px 0 #0c0707,
+    0 0 14px rgba(201, 164, 92, .45);         /* 金のにじみ */
+}
+.hero .en-title .sub { color: var(--gold); }
+.hero .hashtag.outlined { color: #ff6a4a; }
 .hero h1.page-title::after { width: 120px; }
 .hero .lead {
   font-family: var(--mincho); font-weight: 700;
