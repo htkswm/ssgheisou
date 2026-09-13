@@ -1,0 +1,109 @@
+{
+  "event": "サガ スカーレット グレイス 緋色の野望 発売4周年 周回並走会",
+  "shortName": "4周年並走会",
+  "year": 2022,
+  "anniversary": 4,
+  "date": "2022-08-06",
+  "dateNote": "開催日はシート内の記述からの推定（要確認）",
+  "hashtag": "#サガスカ4周年並走会",
+  "source": "Google スプレッドシート「4周年並走会リスト」（00meeting/data/4th-2022-5th-2023-records-sheets.md）",
+  "note": "twitch配信記録はアーカイブ保存期限が過ぎると消える可能性あり。",
+  "runners": [
+    {
+      "name": "ドS妻／ドS", "sns": "https://twitter.com/dsniconico", "snsLabel": "X",
+      "runs": [
+        { "category": "初見レオナルド編NG（ドS妻 → リレーでドS）", "time": "22:57:42 → 23:43:22",
+          "desc": "ドS妻がサガスカ初見RTAに挑戦！ドS妻さんが初見でニューゲームからクリアを目指すコンセプト。レオナルド編（唯一初見攻略サイト無1日クリア可主人公と思われる）選択。最後（付近）まで世界探索もレベリングもしっかりされてラスボスに挑まれていました。最後リタイアとなりましたが、ドSさんがデータ引き継いで8/6中にクリアされたのはさすがです。※ドS妻 22:57:42 はラスボス第二形態でリタイア、ドS引き継ぎ後 23:43:22 でクリア。",
+          "links": [
+            { "label": "アーカイブ1", "url": "https://youtu.be/JzdK4jEHtoU" },
+            { "label": "アーカイブ2", "url": "https://youtu.be/O1BED3GXm00" },
+            { "label": "アーカイブ3", "url": "https://youtu.be/ZHOYwC6ZuqQ" },
+            { "label": "アーカイブ4", "url": "https://youtu.be/jwSViwwAgMs" }
+          ] }
+      ]
+    },
+    {
+      "name": "狩人の合唱", "sns": "https://twitter.com/jagerchor3270", "snsLabel": "X",
+      "runs": [
+        { "category": "レオナルド編NG", "time": "3:38:11",
+          "desc": "レオナルド編初通しでご参加頂きました。事前にチャートを軽くなぞったのみ。1:20くらいにラスボスINからの3:38まで大粘り。厳しい閃き確率と複数回のゾディアックフォールを切り抜け勝ち切る粘りは素晴らしかったです。これぞ命の輝き！",
+          "links": [ { "label": "アーカイブ", "url": "https://www.youtube.com/watch?v=8ifL3mZSH0M" } ] }
+      ]
+    },
+    {
+      "name": "ハイウインド", "sns": "https://twitter.com/highwind_f", "snsLabel": "X",
+      "runs": [
+        { "category": "バルマンテ編NG+", "time": "6:55:32",
+          "desc": "当日直前までタリア編攻略されてのご参加、ありがとうございます。ストーリーのボイス要所要所で「好き」が入る楽しい周回プレーです。武器防具も引き継げるシステムを駆使し、早期から多く仲間加入させて、メンバー豊富に周ります。エリセド姉様にモールドブレイカー（ジャウストの色違い）装備がおしゃれ。バルアサ仲は薪が解決。低HPで2時間以上の激戦を繰り広げています。",
+          "links": [
+            { "label": "アーカイブ1", "url": "https://twitcasting.tv/highwind_f/movie/740950337", "note": "ツイキャス" },
+            { "label": "アーカイブ2", "url": "https://twitcasting.tv/highwind_f/movie/740969348", "note": "ツイキャス" },
+            { "label": "アーカイブ3", "url": "https://twitcasting.tv/highwind_f/movie/740986080", "note": "ツイキャス" }
+          ] }
+      ]
+    },
+    {
+      "name": "sobamin",
+      "runs": [
+        { "category": "レオナルド編NG", "time": "11:50:37",
+          "desc": "初通しとお聞きしたかと思います。ありがとうございます。半日近くかけての挑戦、本当にお疲れ様でした。時間からも窺い知れますが、かなり大変なラスボス戦だったようです。切り抜けるまで再挑戦し、クリア、おめでとうございます。（キャプチャ画像で時間確認のみ）",
+          "links": [] }
+      ]
+    },
+    {
+      "name": "トコ", "sns": "https://twitter.com/toko_85", "snsLabel": "X",
+      "runs": [
+        { "category": "レオナルド編NG+／3人でクリア（ヴィクトリア気絶禁止）", "time": "1:51:00",
+          "desc": "艱難石・安楽石29個という、愛情詰まったデータを利用し、竜槍ゲイボルグのカーンと月下美人タリア、ハードロックなヴィクトリアで周回プレー。皆様かっこいいわね☆ 要所要所で艱難石をうまく使いLv上げ、HP160〜180程度、SLv12程度でラスボス戦突入し、2時間弱でクリアされました。カーン・タリアに慣れ、攻守調整も絶妙なプレー内容でした。",
+          "links": [ { "label": "アーカイブ", "url": "https://twitcasting.tv/toko_85/movie/740972492", "note": "ツイキャス" } ] }
+      ]
+    },
+    {
+      "name": "ちきん", "sns": "https://twitter.com/chikengames0831", "snsLabel": "X",
+      "runs": [
+        { "category": "ウルピナ編NG（１）", "time": "5:50:09",
+          "desc": "ウルピナ編NGカテゴリのRTAを1週間前から覚え、当日ウルピナ編を2周走るという快挙！？を成し遂げました。1周目はバトルタバールゲットのお祭り仕様です。そして、2回とも、徐々にラスボス連戦に慣れていく様子が見られます。",
+          "links": [ { "label": "アーカイブ", "url": "https://www.twitch.tv/videos/1553597849", "note": "twitch配信記録" } ] },
+        { "category": "ウルピナ編NG（２）", "time": "5:12:54",
+          "links": [ { "label": "アーカイブ", "url": "https://www.twitch.tv/videos/1554284702", "note": "twitch配信記録" } ] }
+      ]
+    },
+    {
+      "name": "スカイア", "sns": "https://twitter.com/irisskya", "snsLabel": "X",
+      "runs": [
+        { "category": "バルマンテ編NG", "time": "18:28:44",
+          "desc": "このイベントのためにSteam版を新たにインストールして挑むという、並々ならぬ熱意の入れっぷりで参戦です。初回クリアのためにフィールド超高速移動・バトルムービー高速再生無しという、時間内クリアに大変不向きな環境下で、見事バルマンテ編を完走されました。しっかりしたレベリングと閃き累積貯めと駆け引きがラストに光る周回プレーです。",
+          "links": [
+            { "label": "アーカイブ1", "url": "https://www.youtube.com/watch?v=5_YAaK9nM20" },
+            { "label": "アーカイブ2", "url": "https://www.youtube.com/watch?v=8XKne_J-whE" },
+            { "label": "アーカイブ3", "url": "https://www.youtube.com/watch?v=3v7Go5LwfFw" }
+          ] }
+      ]
+    },
+    {
+      "name": "しーつーサガちゃん", "sns": "https://twitter.com/c2saga", "snsLabel": "X",
+      "runs": [
+        { "category": "タリア編NG", "time": "48:21:53", "reference": true,
+          "desc": "会話飛ばしをなるべくしないでタリア編を気の赴くままにプレーし、クリアするコンセプト。成り行きで全部最強タイプのラスボスを引くことに・・・w道中のイベントを楽しんだ後は、大変なラスボス戦が繰り広げられました。本当に、最後までお疲れ様でした。※クリアまでの全時間が半分を超えているので参考記録。",
+          "links": [
+            { "label": "アーカイブ1", "url": "https://www.twitch.tv/videos/1553076058", "note": "twitch配信記録" },
+            { "label": "アーカイブ2", "url": "https://www.twitch.tv/videos/1554630027", "note": "twitch配信記録" }
+          ] }
+      ]
+    },
+    {
+      "name": "カシワメ", "sns": "https://twitter.com/kashi_wame_", "snsLabel": "X",
+      "runs": [
+        { "category": "4主人公NG(Limited)", "time": "12:19:03",
+          "desc": "クリア順変えてはじめてのラン。うまく作戦嵌ってよかったです。",
+          "links": [ { "label": "アーカイブ", "url": "https://www.twitch.tv/videos/1557940298", "note": "twitch配信記録" } ] },
+        { "category": "4主人公NG+", "time": "6:54:39",
+          "desc": "二次会です。気楽に周回できました。配信が途中一旦途切れましたが、タイマーはそのまま動いていましたので、一応記録としてアーカイブにもいたしました。",
+          "links": [
+            { "label": "アーカイブ1", "url": "https://www.twitch.tv/videos/1557950765", "note": "twitch配信記録" },
+            { "label": "アーカイブ2", "url": "https://www.twitch.tv/videos/1557946685", "note": "twitch配信記録" }
+          ] }
+      ]
+    }
+  ]
+}
