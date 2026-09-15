@@ -166,14 +166,26 @@
       gl.uniform2f(uRes, w, hh);
     }
   }
-  /* フレアの中心をタイトル要素に合わせる（uv: 左下原点） */
-  var anchor = document.querySelector('.flare-anchor') || document.querySelector('.game-title') || document.querySelector('h1');
+  /* フレアの中心（uv: 左下原点）。
+     優先順: .flare-anchor 要素の中心 → .game-sub と .title-kicker の中間の高さ（かしわめ指定）
+     → .game-title の中心 → h1 の中心 */
+  var anchor = document.querySelector('.flare-anchor');
+  var subEl = document.querySelector('.game-sub'), kickEl = document.querySelector('.title-kicker');
+  var fallback = document.querySelector('.game-title') || document.querySelector('h1');
   function updateFocus() {
-    if (scene !== 1 || !anchor) return;
-    var r = anchor.getBoundingClientRect();
-    var cx = (r.left + r.right) / 2 / window.innerWidth;
-    var cy = 1.0 - ((r.top + r.bottom) / 2 / window.innerHeight);
-    gl.uniform2f(uFocus, cx, cy);
+    if (scene !== 1) return;
+    var cx, cy;
+    if (anchor) {
+      var r = anchor.getBoundingClientRect();
+      cx = (r.left + r.right) / 2; cy = (r.top + r.bottom) / 2;
+    } else if (subEl && kickEl) {
+      var rs = subEl.getBoundingClientRect(), rk = kickEl.getBoundingClientRect();
+      cx = (rs.left + rs.right) / 2; cy = (rs.bottom + rk.top) / 2;   /* 2行のあいだの高さ */
+    } else if (fallback) {
+      var rf = fallback.getBoundingClientRect();
+      cx = (rf.left + rf.right) / 2; cy = (rf.top + rf.bottom) / 2;
+    } else { return; }
+    gl.uniform2f(uFocus, cx / window.innerWidth, 1.0 - cy / window.innerHeight);
   }
   var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var start = performance.now();
