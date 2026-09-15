@@ -101,5 +101,21 @@
       ]
     }
   ],
-  "dateConfirmed": "案内スライド表紙で確認（2026-09-13）"
+  "dateConfirmed": "案内スライド表紙で確認（2026-09-13）",
+  "related": {
+    "name": "サガスカ5周年リレー（同日並行開催）",
+    "hashtag": "#サガスカ5周年リレー",
+    "guide": "https://docs.google.com/presentation/d/1e1TJXIIabx5w2yofcu48_JSKqYRJXA10nlvG4SmAPM4/edit",
+    "archives": [
+      {
+        "label": "#サガスカ5周年リレー ちきんさん／ウルピナ編",
+        "url": "https://www.youtube.com/watch?v=Gc5A-RWrbGg"
+      },
+      {
+        "label": "#サガスカ5周年リレー 狩人の合唱さん／レオナルド編・ドSさん／バルマンテ編・カシワメ／タリア編",
+        "url": "https://www.youtube.com/watch?v=MNUR2X0-rVc"
+      }
+    ],
+    "note": "2023.html の RECORDS マーカー外に手書きで掲載（build-records.py は related を描画しない）"
+  }
 }
