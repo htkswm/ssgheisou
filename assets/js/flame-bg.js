@@ -172,19 +172,22 @@
   var anchor = document.querySelector('.flare-anchor');
   var subEl = document.querySelector('.game-sub'), kickEl = document.querySelector('.title-kicker');
   var fallback = document.querySelector('.game-title') || document.querySelector('h1');
+  /* 位置は「画面に固定」: ページ先頭表示時の要素位置（document 座標）から一度だけ決め、
+     スクロールしても動かさない。リサイズとフォント読込後には再計算する。 */
   function updateFocus() {
     if (scene !== 1) return;
-    var cx, cy;
+    var cx, cy, sy = window.scrollY || window.pageYOffset || 0;
     if (anchor) {
       var r = anchor.getBoundingClientRect();
-      cx = (r.left + r.right) / 2; cy = (r.top + r.bottom) / 2;
+      cx = (r.left + r.right) / 2; cy = (r.top + r.bottom) / 2 + sy;
     } else if (subEl && kickEl) {
       var rs = subEl.getBoundingClientRect(), rk = kickEl.getBoundingClientRect();
-      cx = (rs.left + rs.right) / 2; cy = (rs.bottom + rk.top) / 2;   /* 2行のあいだの高さ */
+      cx = (rs.left + rs.right) / 2; cy = (rs.bottom + rk.top) / 2 + sy;   /* 2行のあいだの高さ */
     } else if (fallback) {
       var rf = fallback.getBoundingClientRect();
-      cx = (rf.left + rf.right) / 2; cy = (rf.top + rf.bottom) / 2;
+      cx = (rf.left + rf.right) / 2; cy = (rf.top + rf.bottom) / 2 + sy;
     } else { return; }
+    cy = Math.min(cy, window.innerHeight * 0.92);            /* 画面が低くても見える範囲に */
     gl.uniform2f(uFocus, cx / window.innerWidth, 1.0 - cy / window.innerHeight);
   }
   var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -192,7 +195,6 @@
   var last = 0;
   function draw(now) {
     resize();
-    updateFocus();
     gl.uniform1f(uTime, (now - start) / 1000);
     gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
   }
@@ -200,7 +202,10 @@
     if (now - last > 33) { last = now; draw(now); }
     requestAnimationFrame(loop);
   }
+  updateFocus();
+  if (document.fonts && document.fonts.ready) { document.fonts.ready.then(updateFocus); }
+  window.addEventListener('load', updateFocus);
+  window.addEventListener('resize', function () { resize(); updateFocus(); });
   if (reduced) { draw(start + 4000); return; }
-  window.addEventListener('resize', resize);
   requestAnimationFrame(loop);
 })();

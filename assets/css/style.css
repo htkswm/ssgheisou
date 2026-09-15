@@ -186,7 +186,10 @@ h3.sub-title {
 /* 概要ボックス */
 .about {
   max-width: 720px; margin: 0 auto; padding: 20px 24px;
-  background: var(--bg-2); border-top: 1px solid var(--gold); border-bottom: 1px solid var(--gold);
+  /* 半透明＋ぼかし: 背景の光や彗星の尾が箱の縁でぶつ切りにならないように */
+  background: rgba(29, 21, 21, .62);
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+  border-top: 1px solid var(--gold); border-bottom: 1px solid var(--gold);
 }
 .about p { margin: 6px 0; }
 
