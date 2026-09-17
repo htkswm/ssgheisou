@@ -7,17 +7,17 @@
   "dateEnd": "2024-08-04",
   "hashtag": "#サガスカ6周年並走会",
   "source": "かしわめさん提供（2026-09-18）＋ X の #サガスカ6周年並走会 検索（かしわめ・koma_meat・sagamax の3名分が確認できる範囲）",
-  "note": "6周年は2日間開催（リレーではない）。かしわめ・koma_meat がRTAで並走: 8/3 タリア編NG、8/4 All Stories (Restricted)。解説: 8/3 アジーンさん、8/4 とうふさん。かしわめは 8/3 昼にタリア編NG をソロでも走行（03:40:20、アーカイブ無し）。sagamax さんは 8/4 に NG+ で初めての周回プレー。",
+  "note": "6周年は2日間開催（リレーではない）。並走会に合わせた出し物として、主催かしわめ・koma_meat が RTA Racing（https://www.twitch.tv/rtaracing、RTA のミラー配信担当）のチャンネルを借りて RTA並走: 8/3 タリア編NG、8/4 All Stories (Restricted)。解説: 8/3 アジーンさん、8/4 とうふさん。かしわめは 8/3 昼にタリア編NG をソロでも走行（03:40:20、アーカイブ無し）。sagamax さんは 8/4 に NG+ で初めての周回プレー。",
   "runners": [
     {
       "name": "koma_meat", "sns": "https://x.com/koma_meat", "snsLabel": "X",
       "runs": [
         { "category": "8/3 タリア編NG（RTA並走）", "time": "3:24:09",
           "desc": "かしわめとのRTA並走。解説: アジーンさん（RTAの解説請負人）。",
-          "links": [ { "label": "アーカイブ", "url": "https://www.youtube.com/watch?v=vdAF_QAE6nM", "note": "並走＋解説" } ] },
+          "links": [ { "label": "アーカイブ", "url": "https://www.youtube.com/watch?v=vdAF_QAE6nM", "note": "RTA Racing チャンネルでの並走＋解説" } ] },
         { "category": "8/4 All Stories (Restricted)（RTA並走）", "time": "9:37:42",
           "desc": "4主人公通し。かしわめとのRTA並走。解説: とうふさん（RTA解説者）。",
-          "links": [ { "label": "アーカイブ", "url": "https://www.youtube.com/watch?v=Rg7peT1DpzE", "note": "並走＋解説" } ] }
+          "links": [ { "label": "アーカイブ", "url": "https://www.youtube.com/watch?v=Rg7peT1DpzE", "note": "RTA Racing チャンネルでの並走＋解説" } ] }
       ]
     },
     {
@@ -28,10 +28,10 @@
           "links": [ { "label": "ポスト", "url": "https://x.com/kashi_wame/status/1819549466338439557", "note": "スレッド" } ] },
         { "category": "8/3 夜 タリア編NG（RTA並走）", "time": "4:09:10",
           "desc": "koma_meat さんとのRTA並走。解説: アジーンさん（RTAの解説請負人）。",
-          "links": [ { "label": "アーカイブ", "url": "https://www.youtube.com/watch?v=vdAF_QAE6nM", "note": "並走＋解説" } ] },
+          "links": [ { "label": "アーカイブ", "url": "https://www.youtube.com/watch?v=vdAF_QAE6nM", "note": "RTA Racing チャンネルでの並走＋解説" } ] },
         { "category": "8/4 All Stories (Restricted)（RTA並走）", "time": "10:10:51",
           "desc": "4主人公通し。koma_meat さんとのRTA並走。解説: とうふさん（RTA解説者）。",
-          "links": [ { "label": "アーカイブ", "url": "https://www.youtube.com/watch?v=Rg7peT1DpzE", "note": "並走＋解説" } ] }
+          "links": [ { "label": "アーカイブ", "url": "https://www.youtube.com/watch?v=Rg7peT1DpzE", "note": "RTA Racing チャンネルでの並走＋解説" } ] }
       ]
     },
     {
