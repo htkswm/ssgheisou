@@ -13,10 +13,10 @@
       "name": "koma_meat", "sns": "https://x.com/koma_meat", "snsLabel": "X",
       "runs": [
         { "category": "8/3 タリア編NG（RTA並走）", "time": "3:24:09",
-          "desc": "かしわめとのガチRTA並走。解説: アジーンさん（RTAの解説請負人）。",
+          "desc": "かしわめとのRTA並走。解説: アジーンさん（RTAの解説請負人）。",
           "links": [ { "label": "アーカイブ", "url": "https://www.youtube.com/watch?v=vdAF_QAE6nM", "note": "並走＋解説" } ] },
         { "category": "8/4 All Stories (Restricted)（RTA並走）", "time": "9:37:42",
-          "desc": "4主人公通し。かしわめとのガチRTA並走。解説: とうふさん（RTA解説者）。",
+          "desc": "4主人公通し。かしわめとのRTA並走。解説: とうふさん（RTA解説者）。",
           "links": [ { "label": "アーカイブ", "url": "https://www.youtube.com/watch?v=Rg7peT1DpzE", "note": "並走＋解説" } ] }
       ]
     },
@@ -27,10 +27,10 @@
           "desc": "夜の並走の前に「練習でもあり、並走イベント参加でもあり」の一人走行。おひとりさまの部（！？）。アーカイブはなし。",
           "links": [ { "label": "ポスト", "url": "https://x.com/kashi_wame/status/1819549466338439557", "note": "スレッド" } ] },
         { "category": "8/3 夜 タリア編NG（RTA並走）", "time": "4:09:10",
-          "desc": "koma_meat さんとのガチRTA並走。解説: アジーンさん（RTAの解説請負人）。",
+          "desc": "koma_meat さんとのRTA並走。解説: アジーンさん（RTAの解説請負人）。",
           "links": [ { "label": "アーカイブ", "url": "https://www.youtube.com/watch?v=vdAF_QAE6nM", "note": "並走＋解説" } ] },
         { "category": "8/4 All Stories (Restricted)（RTA並走）", "time": "10:10:51",
-          "desc": "4主人公通し。koma_meat さんとのガチRTA並走。解説: とうふさん（RTA解説者）。",
+          "desc": "4主人公通し。koma_meat さんとのRTA並走。解説: とうふさん（RTA解説者）。",
           "links": [ { "label": "アーカイブ", "url": "https://www.youtube.com/watch?v=Rg7peT1DpzE", "note": "並走＋解説" } ] }
       ]
     },
