@@ -7,28 +7,31 @@
   "dateEnd": "2024-08-04",
   "hashtag": "#サガスカ6周年並走会",
   "source": "かしわめさん提供（2026-09-18）＋ X の #サガスカ6周年並走会 検索（かしわめ・koma_meat・sagamax の3名分が確認できる範囲）",
-  "note": "この年はリレー形式。8/3 タリア編NG、8/4 All Stories (Restricted) を かしわめ・koma_meat が並走し、解説ゲストを招いた（8/3 アジーンさん、8/4 とうふさん）。sagamax さんは 8/4 に NG+ で初めての周回プレー。",
+  "note": "6周年は2日間開催（リレーではない）。かしわめ・koma_meat がガチRTAで並走: 8/3 タリア編NG、8/4 All Stories (Restricted)。解説ゲスト: 8/3 アジーンさん、8/4 とうふさん。かしわめは 8/3 昼にタリア編NG をソロでも走行（03:40:20、アーカイブ無し）。sagamax さんは 8/4 に NG+ で初めての周回プレー。",
   "runners": [
     {
       "name": "koma_meat", "sns": "https://x.com/koma_meat", "snsLabel": "X",
       "runs": [
-        { "category": "8/3 タリア編NG", "time": "3:24:09",
-          "desc": "かしわめとの並走。解説: アジーンさん（RTAの解説請負人）。",
-          "links": [ { "label": "アーカイブ", "url": "https://www.youtube.com/watch?v=vdAF_QAE6nM", "note": "かしわめ・koma_meat 並走＋解説" } ] },
-        { "category": "8/4 All Stories (Restricted)", "time": "9:37:42",
-          "desc": "4主人公通し。かしわめとの並走。解説: とうふさん（RTA解説者）。",
-          "links": [ { "label": "アーカイブ", "url": "https://www.youtube.com/watch?v=Rg7peT1DpzE", "note": "かしわめ・koma_meat 並走＋解説" } ] }
+        { "category": "8/3 タリア編NG（RTA並走）", "time": "3:24:09",
+          "desc": "かしわめとのガチRTA並走。解説: アジーンさん（RTAの解説請負人）。",
+          "links": [ { "label": "アーカイブ", "url": "https://www.youtube.com/watch?v=vdAF_QAE6nM", "note": "並走＋解説" } ] },
+        { "category": "8/4 All Stories (Restricted)（RTA並走）", "time": "9:37:42",
+          "desc": "4主人公通し。かしわめとのガチRTA並走。解説: とうふさん（RTA解説者）。",
+          "links": [ { "label": "アーカイブ", "url": "https://www.youtube.com/watch?v=Rg7peT1DpzE", "note": "並走＋解説" } ] }
       ]
     },
     {
       "name": "かしわめ", "sns": "https://x.com/kashi_wame", "snsLabel": "X",
       "runs": [
-        { "category": "8/3 タリア編NG", "time": "4:09:10",
-          "desc": "koma_meat さんとの並走。解説: アジーンさん（RTAの解説請負人）。",
-          "links": [ { "label": "アーカイブ", "url": "https://www.youtube.com/watch?v=vdAF_QAE6nM", "note": "かしわめ・koma_meat 並走＋解説" } ] },
-        { "category": "8/4 All Stories (Restricted)", "time": "10:10:51",
-          "desc": "4主人公通し。koma_meat さんとの並走。解説: とうふさん（RTA解説者）。",
-          "links": [ { "label": "アーカイブ", "url": "https://www.youtube.com/watch?v=Rg7peT1DpzE", "note": "かしわめ・koma_meat 並走＋解説" } ] }
+        { "category": "8/3 昼 タリア編NG（ソロ）", "time": "3:40:20",
+          "desc": "夜の並走の前に「練習でもあり、並走イベント参加でもあり」の一人走行。おひとりさまの部（！？）。アーカイブはなし。",
+          "links": [ { "label": "ポスト", "url": "https://x.com/kashi_wame/status/1819549466338439557", "note": "スレッド" } ] },
+        { "category": "8/3 夜 タリア編NG（RTA並走）", "time": "4:09:10",
+          "desc": "koma_meat さんとのガチRTA並走。解説: アジーンさん（RTAの解説請負人）。",
+          "links": [ { "label": "アーカイブ", "url": "https://www.youtube.com/watch?v=vdAF_QAE6nM", "note": "並走＋解説" } ] },
+        { "category": "8/4 All Stories (Restricted)（RTA並走）", "time": "10:10:51",
+          "desc": "4主人公通し。koma_meat さんとのガチRTA並走。解説: とうふさん（RTA解説者）。",
+          "links": [ { "label": "アーカイブ", "url": "https://www.youtube.com/watch?v=Rg7peT1DpzE", "note": "並走＋解説" } ] }
       ]
     },
     {
