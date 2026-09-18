@@ -271,7 +271,13 @@ h3.sub-title {
 .pending p { margin: 4px 0; }
 
 /* ---------- Guide (ルール) ---------- */
-.guide { max-width: 760px; margin: 0 auto; }
+.guide {
+  max-width: 760px; margin: 0 auto; padding: 4px 22px 22px;
+  /* モザイク背景の上で本文が読めるように、半透明の暗い敷き＋軽いぼかし */
+  background: rgba(18, 13, 13, .72);
+  -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px);
+  border-top: 1px solid rgba(201, 164, 92, .45); border-bottom: 1px solid rgba(201, 164, 92, .45);
+}
 .guide ul { padding-left: 1.3em; margin: 6px 0 14px; }
 .guide li { margin: 4px 0; }
 .guide li ul { margin: 2px 0 4px; }

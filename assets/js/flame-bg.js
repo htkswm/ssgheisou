@@ -4,6 +4,8 @@
    - "comet"  : ホーム。暗い緋色の空＋星＋右から左へ流れてくる彗星＋タイトル背後の「フレア」
                 （トレーラーのタイトル出しのように、金〜緋色の光がふわっと広がり炎の筋と火の粉が散る）。
                 フレアの中心は .flare-anchor（無ければ .game-title / h1）の位置に追従する。
+   - "mosaic" : ルールページ。モザイク画風のタイル面（小さな四角いタイル＋目地、暗い青緑の地に黄土・テラコッタ・深紅・オリーブ）をぼんやり敷き、
+                アーチ状にうっすら金を帯びた帯を入れる。特定の絵柄は描かない（思わせぶりだけ）。
    - "ending" : 記録ページ。エンディングの空のように、暗い宇宙に琥珀と青緑の星雲が
                 ゆっくり「もわもわ」と揺らぐ＋星の瞬き。
    控えめ設定: 半解像度で描画、約30fps。prefers-reduced-motion なら1フレームだけ描いて止める。
@@ -12,7 +14,7 @@
   if (document.getElementById('flame-bg')) return;
   var intensity = (typeof window.FLAME_INTENSITY === 'number') ? window.FLAME_INTENSITY : 0.55;
   if (intensity <= 0) return;
-  var scene = (window.FLAME_SCENE === 'comet') ? 1 : (window.FLAME_SCENE === 'ending') ? 2 : 0;
+  var scene = (window.FLAME_SCENE === 'comet') ? 1 : (window.FLAME_SCENE === 'ending') ? 2 : (window.FLAME_SCENE === 'mosaic') ? 3 : 0;
 
   var canvas = document.createElement('canvas');
   canvas.id = 'flame-bg';
@@ -106,6 +108,48 @@
     '  float fa2=clamp(flare,0.0,1.0)*0.62;',
     '  rgb=rgb*(1.0-fa2)+fc*fa2; a=a*(1.0-fa2)+fa2;',
     '  rgb+=vec3(1.0,0.75,0.35)*ember*0.9; a=min(1.0,a+ember*0.8);',
+    ' } else if(u_scene>2.5){',
+    /* ---- ルールページ: モザイク画風のタイル（特定の絵柄は描かない。色味と目地だけ） ---- */
+    '  float ts=8.0;',                                       /* タイル1枚 = 8 canvas px（画面では約16px） */
+    '  vec2 tp=gl_FragCoord.xy/ts;',
+    '  vec2 cell=floor(tp); vec2 f=fract(tp);',
+    '  float r1=hash(cell+0.7), r2=hash(cell+4.1);',
+    /* 色の「領域」: 低周波ノイズで壁画のように色がまとまって分布する */
+    '  float zone=fbm3(cell*0.075+vec2(3.1,7.7));',
+    '  vec3 P0=vec3(0.07,0.15,0.15);',                       /* 暗い青緑 */
+    '  vec3 P1=vec3(0.60,0.44,0.16);',                       /* 黄土 */
+    '  vec3 P2=vec3(0.60,0.27,0.12);',                       /* テラコッタ */
+    '  vec3 P3=vec3(0.42,0.09,0.08);',                       /* 深紅 */
+    '  vec3 P4=vec3(0.24,0.33,0.15);',                       /* オリーブ */
+    '  vec3 P5=vec3(0.06,0.05,0.05);',                       /* ほぼ黒 */
+    '  vec3 tc=P0;',
+    '  tc=mix(tc,P5,smoothstep(0.30,0.36,zone));',
+    '  tc=mix(tc,P3,smoothstep(0.42,0.48,zone));',
+    '  tc=mix(tc,P2,smoothstep(0.54,0.60,zone));',
+    '  tc=mix(tc,P1,smoothstep(0.64,0.70,zone));',
+    '  tc=mix(tc,P4,smoothstep(0.76,0.82,zone));',
+    /* 同じ領域内でも1枚ごとに少し色が違う（テッセラの不揃い） */
+    '  tc*=(0.72+0.5*r1)*0.8;',
+    '  tc=mix(tc,tc.grb*0.9,0.12*(r2-0.5));',
+    /* 目地（暗い線）と、タイル縁のわずかなハイライト */
+    '  float edge=min(min(f.x,1.0-f.x),min(f.y,1.0-f.y));',
+    '  float grout=smoothstep(0.0,0.11,edge);',
+    '  float hl=smoothstep(0.11,0.2,edge)*(1.0-smoothstep(0.2,0.35,edge))*0.12;',
+    '  tc=tc*grout+hl;',
+    /* 思わせぶりのアーチ: 中央上のリング状にうっすら金を帯びて明るく */
+    '  vec2 ac=vec2((uv.x-0.5)*ar, uv.y-0.50);',
+    '  float ad=length(ac);',
+    '  float arch=smoothstep(0.05,0.0,abs(ad-0.36))*step(0.0,ac.y);',      /* 上半分の弧 */
+    '  arch+=smoothstep(0.05,0.0,abs(abs(ac.x)-0.36))*(1.0-step(0.0,ac.y))*smoothstep(-0.45,-0.05,ac.y);', /* 両脇の柱 */
+    '  arch=clamp(arch,0.0,1.0);',
+    '  tc+=vec3(0.55,0.42,0.18)*arch*0.55*grout;',
+    /* ゆっくり流れる微かな光沢（タイルがきらめく） */
+    '  float glim=smoothstep(0.75,1.0,noise(cell*0.3+vec2(t*1.5,-t*0.9)))*0.25;',
+    '  tc+=vec3(0.9,0.8,0.6)*glim*grout;',
+    /* 全体はぼんやり: 暗めの周辺減光 */
+    '  float vg=1.0-0.6*smoothstep(0.25,0.85,length(vec2((uv.x-0.5)*ar,uv.y-0.5)));',
+    '  float ma=0.34*vg;',
+    '  rgb=tc*ma; a=ma;',
     ' } else {',
     /* ---- 記録ページ: エンディングの空（琥珀と青緑の星雲がゆっくり揺らぐ） ---- */
     '  vec2 q=vec2(uv.x*ar,uv.y);',
