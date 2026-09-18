@@ -232,7 +232,7 @@ h3.sub-title {
 }
 .event-banner .text small { display: block; font-size: .78rem; color: #e6d2b8; font-weight: 400; letter-spacing: .08em; }
 
-.runners { display: grid; gap: 26px 26px; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+.runners { display: grid; gap: 22px 18px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
 .runner { display: flex; flex-direction: column; gap: 6px; }
 /* 走者名 = 選択中の帯 */
 .runner .rname {
