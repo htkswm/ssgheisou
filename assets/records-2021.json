@@ -5,11 +5,61 @@
   "anniversary": 3,
   "date": "2021-08-01",
   "hashtag": "#サガスカ3周年並走会",
-  "source": "案内スライド https://docs.google.com/presentation/d/19ZeK0ZSup4SdC7pPlSRP4LtJ3UEbiuMaM_FPP-SHj9k/edit（記録シートは所在不明）",
-  "note": "「3周年前夜」として 8/1（日）開催。記録一覧は未整理。",
-  "pendingText": [
-    "3周年前夜並走会の記録まとめは準備中です。",
-    "#サガスカ3周年並走会 のポストをもとに整理していきます。"
-  ],
-  "runners": []
+  "source": "かしわめさん提供の X ポスト URL（2026-09-19）。当時の参加者のうちアカウントごと消えて拾えない記録あり。",
+  "note": "「3周年前夜」として 8/1（日）開催。記録シートは無く、ポストから拾える範囲のみ。",
+  "runners": [
+    {
+      "name": "u", "sns": "https://x.com/u_sagasca", "snsLabel": "X",
+      "runs": [
+        { "category": "ニューゲームからの全裸クリア（武器防具アクセ装備禁止・体術縛り）ファイアブリンガー撃破", "time": null,
+          "desc": "HP500そこそこ、スキルレベル20弱（推定）でパンチと投げ投げするプレー。そして飛んでくる謎の二刀荒時雨。並走会当日には調整が間に合わず、やりたかったことの鰤戦動画を3周年記念として公開。",
+          "links": [
+            { "label": "ポスト", "url": "https://x.com/u_sagasca/status/1422113997533319168" },
+            { "label": "かしわめの紹介", "url": "https://x.com/kashi_wame/status/1422488179395887110" },
+            { "label": "アーカイブ", "url": "https://www.youtube.com/watch?v=RBjpVnCkNIA" }
+          ] }
+      ]
+    },
+    {
+      "name": "カシワメ", "sns": "https://x.com/kashi_wame", "snsLabel": "X",
+      "runs": [
+        { "category": "4主人公通し", "time": null,
+          "desc": "8/1 に Twitch 配信で4主人公通しクリア。",
+          "links": [ { "label": "ポスト", "url": "https://x.com/kashi_wame/status/1421701858221907968" } ] }
+      ]
+    },
+    {
+      "name": "オムそば", "sns": "https://x.com/OmeletteIncogni", "snsLabel": "X",
+      "runs": [
+        { "category": "タリア編NG 戦闘準備禁止", "time": "9:00:57",
+          "desc": "メニューの戦闘準備を一切使わずにタリア編をクリアするチャレンジ。本番ではフリーズが発生したため、記録は再計測によるもの。チャートを Google ドキュメントにまとめてくださいました。",
+          "links": [
+            { "label": "ポスト", "url": "https://x.com/OmeletteIncogni/status/1422154885139636237" },
+            { "label": "チャート", "url": "https://docs.google.com/document/d/e/2PACX-1vTadsi13IkkZ4DP2_HcPZH_EIuwblenHTkIpz0x9JHzvhTgLrcUagmuG3NFtqo0E5HytHmF8yMK76ls/pub", "note": "Google ドキュメント" }
+          ] }
+      ]
+    },
+    {
+      "name": "ドS", "sns": "https://x.com/dsniconico", "snsLabel": "X",
+      "runs": [
+        { "category": "真ファイアブリンガーNG+ RTA", "time": "記録なし",
+          "desc": "「良い夢見れました。」1度目の挑戦でブリ最終形態まで到達。",
+          "links": [
+            { "label": "ポスト", "url": "https://x.com/dsniconico/status/1422172298065235979" },
+            { "label": "アーカイブ", "url": "https://www.youtube.com/watch?v=Dcge8kFGGtA" }
+          ] }
+      ]
+    },
+    {
+      "name": "83", "sns": "https://x.com/83_drachengross", "snsLabel": "X",
+      "runs": [
+        { "category": "#フランシスの奇妙な冒険（J.P.フランシスと行く周回）", "time": "6:17:00", "reference": true,
+          "desc": "18:30 開始。緋の欠片を集め、艱難石も使いつつ育成してファイアブリンガーへ。日を跨いでの撃破のため参考記録。「主人公は戦闘では役に立たなかったのですが、癒し系でカダの恩寵を引き寄せて、勝利に貢献した奴です。」",
+          "links": [
+            { "label": "ポスト（開始）", "url": "https://x.com/83_drachengross/status/1421774331235880966" },
+            { "label": "ポスト（クリア）", "url": "https://x.com/83_drachengross/status/1421863065386065926" }
+          ] }
+      ]
+    }
+  ]
 }
