@@ -1,6 +1,7 @@
 /* 背景演出（WebGL、ライブラリ不使用）
    ページ全体の背後（z-index:-1）に固定 canvas を敷く。シーンは window.FLAME_SCENE で切替:
-   - （未指定）: 画面下から炎がそっと立ちのぼる（ルール・Link）。
+   - （未指定）: 画面下から炎がそっと立ちのぼる（現在は未使用。汎用）。
+   - "window" : Link ページ。楕円の窓から夜空をのぞく（十二星神の設定画の構図）。深い藍〜青緑の空が揺らぎ、白い星と少数の赤い光点。星座は描かない。
    - "comet"  : ホーム。暗い緋色の空＋星＋右から左へ流れてくる彗星＋タイトル背後の「フレア」
                 （トレーラーのタイトル出しのように、金〜緋色の光がふわっと広がり炎の筋と火の粉が散る）。
                 フレアの中心は .flare-anchor（無ければ .game-title / h1）の位置に追従する。
@@ -14,7 +15,7 @@
   if (document.getElementById('flame-bg')) return;
   var intensity = (typeof window.FLAME_INTENSITY === 'number') ? window.FLAME_INTENSITY : 0.55;
   if (intensity <= 0) return;
-  var scene = (window.FLAME_SCENE === 'comet') ? 1 : (window.FLAME_SCENE === 'ending') ? 2 : (window.FLAME_SCENE === 'mosaic') ? 3 : 0;
+  var scene = (window.FLAME_SCENE === 'comet') ? 1 : (window.FLAME_SCENE === 'ending') ? 2 : (window.FLAME_SCENE === 'mosaic') ? 3 : (window.FLAME_SCENE === 'window') ? 4 : 0;
 
   var canvas = document.createElement('canvas');
   canvas.id = 'flame-bg';
@@ -108,6 +109,36 @@
     '  float fa2=clamp(flare,0.0,1.0)*0.62;',
     '  rgb=rgb*(1.0-fa2)+fc*fa2; a=a*(1.0-fa2)+fa2;',
     '  rgb+=vec3(1.0,0.75,0.35)*ember*0.9; a=min(1.0,a+ember*0.8);',
+    ' } else if(u_scene>3.5){',
+    /* ---- Link ページ: 楕円の窓から夜空をのぞく（十二星神の設定画の構図。星座は描かない） ---- */
+    '  vec2 q=vec2((uv.x-0.5)*ar, uv.y-0.52);',
+    '  vec2 rad=vec2(0.44*ar+0.10, 0.40);',                         /* 楕円の半径（横は画面幅に追従） */
+    '  float e=length(q/rad);',                                        /* 1.0 が楕円の縁 */
+    '  float inside=1.0-smoothstep(0.97,1.0,e);',
+    /* 夜空: 深い藍に、青緑〜水色の雲がドメインワープでゆっくり揺らぐ */
+    '  vec2 p=q*2.4;',
+    '  vec2 w1=vec2(fbm(p+vec2(t*0.30,t*0.18)), fbm(p+vec2(4.7,2.1)-t*0.22));',
+    '  float neb=fbm(p+1.7*w1+vec2(0.0,t*0.12));',
+    '  float neb2=fbm(p*1.6+1.4*w1.yx+vec2(8.0,-t*0.1));',
+    '  vec3 sky=vec3(0.02,0.06,0.16);',                                 /* 深い藍 */
+    '  sky=mix(sky,vec3(0.06,0.32,0.42),smoothstep(0.38,0.75,neb));',   /* 青緑の雲 */
+    '  sky=mix(sky,vec3(0.30,0.72,0.80),smoothstep(0.62,0.92,neb2)*0.6);',   /* 明るい水色の筋 */
+    '  sky=mix(sky,vec3(0.10,0.05,0.18),smoothstep(0.15,0.0,neb)*0.5);', /* 暗い紫の陰 */
+    /* 星: 白い小さな星と、少数の赤い光点（にじみ付き） */
+    '  float st=stars(q*52.0+vec2(31.0,7.0),u_time);',
+    '  vec2 rp=q*9.0; vec2 rc=floor(rp); float rr0=hash(rc+13.0);',
+    '  vec2 rpos=rc+vec2(hash(rc+2.2),hash(rc+9.9)); float rd=length(rp-rpos);',
+    '  float red=(smoothstep(0.06,0.0,rd)+smoothstep(0.35,0.0,rd)*0.35)*step(0.86,rr0)*(0.7+0.3*sin(u_time*1.3+rr0*40.0));',
+    '  sky+=vec3(0.95,0.97,1.0)*st*0.9;',
+    '  sky+=vec3(0.95,0.15,0.25)*red;',
+    /* 縁: 楕円の内側に沿って青緑の光のにじみ、外は暗い枠 */
+    '  float rim=smoothstep(0.78,0.99,e)*inside;',
+    '  sky+=vec3(0.25,0.75,0.85)*rim*0.35;',
+    '  vec3 frame=vec3(0.015,0.035,0.045)*(1.0-0.5*smoothstep(1.0,1.6,e));',
+    '  float halo=smoothstep(1.25,1.0,e)*(1.0-inside)*0.25;',          /* 枠側へ漏れる淡い光 */
+    '  frame+=vec3(0.15,0.45,0.55)*halo;',
+    '  rgb=mix(frame,sky,inside);',
+    '  a=mix(0.92,0.80,inside);',
     ' } else if(u_scene>2.5){',
     /* ---- ルールページ: モザイク画風のタイル（特定の絵柄は描かない。色味と目地だけ） ---- */
     '  float ts=8.0;',                                       /* タイル1枚 = 8 canvas px（画面では約16px） */
