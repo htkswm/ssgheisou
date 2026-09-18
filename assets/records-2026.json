@@ -5,7 +5,53 @@
   "anniversary": 8,
   "date": "2026-08-02",
   "hashtag": "#サガスカ8周年並走会",
-  "source": "未集計（8周年案内スライド: https://docs.google.com/presentation/d/1bXtDoiFPFDMWX0paBDCdlVTRgh3PmjMnLYcSLNjuJPc/edit）",
-  "note": "記録まとめはまだ。ハッシュタグのポストから集計してここに追記する。",
-  "runners": []
+  "source": "かしわめさん集計（2026-09-18）。各自のポストとアーカイブより。",
+  "note": "かしわめの3回目のアーカイブは公開保留中（2026-09-18 時点）。",
+  "runners": [
+    {
+      "name": "かしわめ", "sns": "https://x.com/kashi_wame", "snsLabel": "X",
+      "runs": [
+        { "category": "バルマンテ編NG（1回目）", "time": "2:54:41",
+          "links": [ { "label": "ポスト", "url": "https://x.com/kashi_wame/status/2083565137236300047" }, { "label": "アーカイブ", "url": "https://www.youtube.com/watch?v=DNqCyzkrL2Q" } ] },
+        { "category": "バルマンテ編NG（2回目）", "time": "2:38:10",
+          "links": [ { "label": "ポスト", "url": "https://x.com/kashi_wame/status/2083785545298378855" }, { "label": "アーカイブ", "url": "https://www.youtube.com/watch?v=3c732pa4S6k" } ] },
+        { "category": "バルマンテ編NG（3回目）", "time": "3:09:53",
+          "desc": "合計3周。",
+          "links": [ { "label": "ポスト", "url": "https://x.com/kashi_wame/status/2083871407344418875" }, { "label": "アーカイブ", "url": "https://youtu.be/obRZMYHnIP0", "note": "公開準備中" } ] }
+      ]
+    },
+    {
+      "name": "koma_meat", "sns": "https://fedibird.com/@koma_meat", "snsLabel": "fedibird",
+      "runs": [
+        { "category": "ウルピナ編NG 仲間加入禁止縛り（周回プレー）", "time": "5:34:07",
+          "desc": "やはり暴力（二刀流）、暴力が大体全部解決しちゃウルピナフィニッシュ！",
+          "links": [ { "label": "ポスト", "url": "https://fedibird.com/@koma_meat/117023503685466604" } ] }
+      ]
+    },
+    {
+      "name": "霧雨マリパ（アセルス）", "sns": "https://x.com/kirisame_maripa", "snsLabel": "X",
+      "runs": [
+        { "category": "ハウス様が主役の引継ぎ有三人旅", "time": "15:16:35", "reference": true,
+          "desc": "計測は標準時刻 8:59:56〜24:16:31（24時過ぎ完走のため参考記録）。昨年に引き続きご参加いただきありがとうございます。ここに新たなハウス様の新製品記録が残りました。200回弱のバトル回数で強ラスボスは、なかなか絶え間ない見せ場だな！",
+          "links": [
+            { "label": "ポスト1", "url": "https://x.com/kirisame_maripa/status/2083766637963214908" },
+            { "label": "ポスト2", "url": "https://x.com/kirisame_maripa/status/2083812393826890197" },
+            { "label": "ポスト3", "url": "https://x.com/kirisame_maripa/status/2083929590477771011" },
+            { "label": "ポスト4", "url": "https://x.com/kirisame_maripa/status/2083941169294422320" }
+          ] }
+      ]
+    },
+    {
+      "name": "アプフェル", "sns": "https://x.com/apfelchain", "snsLabel": "X",
+      "runs": [
+        { "category": "バルマンテ編NG 黒幕エンド縛り（ラスボスALL最強ルート）", "time": "13:15:17",
+          "links": [
+            { "label": "ポスト1", "url": "https://x.com/apfelchain/status/2080287134741864936" },
+            { "label": "ポスト2", "url": "https://x.com/apfelchain/status/2083907259483177139" },
+            { "label": "アーカイブ1", "url": "https://www.youtube.com/watch?v=qO53Qxzn7RA" },
+            { "label": "アーカイブ2", "url": "https://www.youtube.com/watch?v=JS0b5FOgFa0" }
+          ] }
+      ]
+    }
+  ]
 }
